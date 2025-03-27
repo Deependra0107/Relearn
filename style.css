@@ -1,87 +1,120 @@
-/* Import a modern font (optional) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* --- MERGED body style --- */
 body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Stack main content */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
     color: #fff;
     padding: 20px;
 }
 
-/* --- ADDED main style --- */
 main {
-    width: 100%; /* Allow main to take width for centering the card */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Glassmorphism Style - MERGED */
 .glass {
-    background: rgba(255, 255, 255, 0.15); /* Updated from 0.2 */
-    border-radius: 16px; /* Updated from 20px */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Updated from 0 4px 30px */
-    backdrop-filter: blur(12px); /* Updated from 7px */
-    -webkit-backdrop-filter: blur(12px); /* For Safari */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Updated from 0.3 */
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 30px;
-    color: #fff; /* Ensure text inside glass is white */
+    color: #fff;
 }
 
-/* Icon Styling */
 .icon {
     margin-right: 8px;
-    vertical-align: middle; /* Align icons better with text */
+    vertical-align: middle;
 }
 
-/* Button Styling - MERGED */
 button, .button-link {
-    background-color: rgba(255, 255, 255, 0.2); /* Glass theme button */
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 12px 25px;
+    padding: 10px 20px;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-flex; /* For icon alignment */
+    transition: all 0.3s ease;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none; /* For .button-link */
-    backdrop-filter: blur(5px); /* Optional: Add blur to buttons too */
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 button:hover, .button-link:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Lighter glass hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.15) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 button:active, .button-link:active {
-    transform: translateY(0); /* Press down effect */
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+.google-signin {
+    background-image: none;
+    background-color: #fff;
+    color: #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+    border: none;
+}
+.google-signin:hover {
+    background-image: none;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-/* Login Page Styles (`index.html`) */
+.share-button {
+    background-image: linear-gradient(135deg, #17a2b8, #117a8b);
+    border: none;
+}
+.share-button:hover {
+    background-image: linear-gradient(135deg, #19b1c9, #138ca0);
+}
+
+.linkedin-link {
+    background-image: linear-gradient(135deg, #0077B5, #005e90);
+    border: none;
+}
+.linkedin-link:hover {
+     background-image: linear-gradient(135deg, #008cd1, #006cae);
+}
+
+.connect-button {
+     background-image: linear-gradient(135deg, rgba(40, 167, 69, 0.8), rgba(30, 130, 50, 0.8));
+     border: none;
+}
+.connect-button:hover {
+     background-image: linear-gradient(135deg, rgba(45, 180, 75, 0.9), rgba(35, 145, 55, 0.9));
+}
+
 .login-container {
     display: flex;
     width: 80%;
     max-width: 900px;
     min-height: 500px;
-    overflow: hidden; /* Keep content within rounded corners */
+    overflow: hidden;
 }
 
 .login-left {
@@ -91,7 +124,7 @@ button:active, .button-link:active {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 30px; /* Added padding */
+    padding: 30px;
 }
 
 .login-left .logo {
@@ -109,42 +142,27 @@ button:active, .button-link:active {
     font-size: 2.8rem;
 }
 
-.google-signin {
-    background-color: #fff;
-    color: #444;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
-    border: none;
-    backdrop-filter: none; /* Remove blur */
-}
-
-.google-signin:hover {
-    background-color: #f8f8f8;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-}
-
-.google-signin .icon {
-    color: #DB4437; /* Google Red */
-}
-
 .login-right {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('/relean.webp') center/cover no-repeat; /* Merged background */
+    background: url('relean.webp') center/cover no-repeat; /* Corrected path */
     border-radius: 0 16px 16px 0;
 }
 
-/* Removed .image-placeholder as .login-right handles the image */
-
-
-/* College Selection Page Styles (`college.html`) */
 .college-container {
     width: 90%;
     max-width: 600px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 30px;
+    color: #fff;
 }
 
 .college-container h1 {
@@ -176,8 +194,8 @@ button:active, .button-link:active {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 10px;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: rgba(255,255,255,0.3) transparent; /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.3) transparent;
 }
 
 .college-list::-webkit-scrollbar { width: 8px; }
@@ -205,8 +223,6 @@ button:active, .button-link:active {
 
 .college-item.hidden { display: none; }
 
-
-/* Dashboard Page Styles (`dashboard.html`) */
 .dashboard-container {
     width: 90%;
     max-width: 1200px;
@@ -218,6 +234,7 @@ button:active, .button-link:active {
     align-items: center;
     margin-bottom: 30px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .college-header {
@@ -228,29 +245,44 @@ button:active, .button-link:active {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    margin-bottom: 15px;
-    flex-grow: 1;
+    margin-bottom: 0;
     justify-content: center;
 }
+.college-header .icon { font-size: 1.8rem; margin-right: 15px; }
+.college-header h2 { font-size: 1.6rem; font-weight: 500; margin: 0; }
 
-.college-header .icon {
-    font-size: 1.8rem;
-    margin-right: 15px;
+.dashboard-profile-widget {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: #eee;
+    margin-bottom: 0;
+    flex-shrink: 0;
 }
+.dashboard-profile-widget:hover { background-color: rgba(0, 0, 0, 0.2); }
 
-.college-header h2 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin: 0;
+#dashboard-profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.profile-link { /* Style for the link acting as a button */
-    /* Inherits .button-link styles */
-    padding: 10px 20px;
-    font-size: 1rem;
-    white-space: nowrap;
-    margin-bottom: 15px; /* Spacing when wrapped */
+#dashboard-profile-pic.default-icon::before {
+    content: '\f007'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+    font-size: 18px; color: rgba(255, 255, 255, 0.7);
 }
+#dashboard-profile-name { font-size: 0.9rem; font-weight: 500; white-space: nowrap; }
 
 .dashboard-grid {
     display: grid;
@@ -258,7 +290,7 @@ button:active, .button-link:active {
     gap: 25px;
 }
 
-.card { /* Base card style */
+.card {
     min-height: 220px;
     display: flex;
     flex-direction: column;
@@ -266,1253 +298,202 @@ button:active, .button-link:active {
     justify-content: space-between;
     text-align: center;
     color: #eee;
-    /* Inherits .glass style by applying class="card glass" */
 }
 
-.card h3 {
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    font-size: 1.3rem;
-}
+.card h3 { font-weight: 600; margin-bottom: 15px; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); display: flex; align-items: center; font-size: 1.3rem; }
+.card h3 .icon { font-size: 1.1em; margin-right: 10px; }
+.card .content { flex-grow: 1; font-size: 0.95rem; color: #eee; padding: 0 10px 10px 10px; line-height: 1.5; }
+.card .actions { display: flex; gap: 15px; margin-top: 15px; flex-wrap: wrap; justify-content: center; width: 100%; padding: 0 10px 10px 10px; }
+.card button, .card .button-link { padding: 10px 15px; font-size: 0.9rem; flex-grow: 1; max-width: 150px; }
+.card button .icon, .card .button-link .icon { margin-right: 6px; }
 
-.card h3 .icon {
-    font-size: 1.1em;
-    margin-right: 10px;
-}
+.card-link { text-decoration: none; color: inherit; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+.card-link:hover { transform: translateY(-5px); box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2); }
+.card-link .content { flex-grow: 1; }
+.view-feed-button { margin-top: auto; align-self: center; padding: 10px 20px; font-size: 0.9rem; }
 
-.card .content {
-    flex-grow: 1;
-    font-size: 0.95rem;
-    color: #eee;
-    padding: 0 10px 10px 10px;
-    line-height: 1.5;
-}
-
-.card .actions {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    padding: 0 10px 10px 10px;
-}
-
-.card button, .card .button-link { /* Button styling within cards */
-    padding: 10px 15px;
-    font-size: 0.9rem;
-    flex-grow: 1;
-    max-width: 150px;
-}
-
-.card button .icon, .card .button-link .icon {
-     margin-right: 6px;
-}
-
-/* Dashboard Modifications for Activity Feed Link Card */
-.card-link {
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* Ensure link behaves like a block/flex container */
-    flex-direction: column; /* Stack content vertically */
-    /* Inherits .card and .glass styles */
-}
-.card-link:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
-}
-.card-link .content {
-    flex-grow: 1;
-}
-
-.view-feed-button {
-    margin-top: auto; /* Push button to bottom */
-    align-self: center; /* Center button horizontally */
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    /* Inherits button styles */
-}
-
-
-/* Form Page Styles (`donate.html`, `request.html`) */
-.form-page-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 20px;
-    min-height: 100vh;
-}
-
-.form-container {
-    width: 90%;
-    max-width: 600px;
-    /* Inherits .glass styling */
-}
-
-.form-container h2 {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-.form-container h2 .icon {
-    margin-right: 10px;
-}
-
-.college-display {
-    text-align: center;
-    color: #eee;
-    margin-bottom: 25px;
-    font-size: 1rem;
-    padding: 8px 15px;
-    background: rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    display: inline-block;
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
-.college-display .icon {
-    margin-right: 8px;
-    color: #fff;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #eee;
-    display: flex;
-    align-items: center;
-}
-.form-group label .icon {
-    margin-right: 8px;
-    width: 1.2em;
-    text-align: center;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.15);
-    font-size: 1rem;
-    color: #fff;
-    font-family: inherit;
-    outline: none;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    border-color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-.form-group select option {
-    background-color: #4a4e69; /* Darker background for options */
-    color: #fff;
-}
-
-.form-group input[type="file"] {
-    padding: 8px;
-    cursor: pointer;
-    color: #eee;
-}
-.form-group input[type="file"]::-webkit-file-upload-button {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-}
-.form-group input[type="file"]::-webkit-file-upload-button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.form-group small {
-    display: block;
-    margin-top: 5px;
-    font-size: 0.85rem;
-    color: #eee;
-}
-
-.submit-button {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.1rem;
-    margin-top: 10px;
-    /* Uses standard button style */
-}
-
-.back-link { /* General back link for forms etc. */
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    color: #eee;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
+.form-page-container { width: 100%; display: flex; justify-content: center; align-items: flex-start; padding: 40px 20px; min-height: 100vh; }
+.form-container { width: 90%; max-width: 600px; }
+.form-container h2 { text-align: center; color: #fff; margin-bottom: 20px; font-size: 1.8rem; display: flex; align-items: center; justify-content: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); }
+.form-container h2 .icon { margin-right: 10px; }
+.college-display { text-align: center; color: #eee; margin-bottom: 25px; font-size: 1rem; padding: 8px 15px; background: rgba(0, 0, 0, 0.15); border-radius: 8px; display: inline-block; margin-left: 50%; transform: translateX(-50%); }
+.college-display .icon { margin-right: 8px; color: #fff; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: #eee; display: flex; align-items: center; }
+.form-group label .icon { margin-right: 8px; width: 1.2em; text-align: center; }
+.form-group input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], .form-group textarea, .form-group select { width: 100%; padding: 12px 15px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; background-color: rgba(255, 255, 255, 0.15); font-size: 1rem; color: #fff; font-family: inherit; outline: none; transition: border-color 0.3s ease, background-color 0.3s ease; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255, 255, 255, 0.7); }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: rgba(255, 255, 255, 0.5); background-color: rgba(255, 255, 255, 0.25); }
+.form-group select option { background-color: #4a4e69; color: #fff; }
+.form-group input[type="file"] { padding: 8px; cursor: pointer; color: #eee; }
+.form-group input[type="file"]::-webkit-file-upload-button { background-color: rgba(255, 255, 255, 0.2); color: white; border: 1px solid rgba(255, 255, 255, 0.3); padding: 8px 12px; border-radius: 6px; cursor: pointer; margin-right: 10px; transition: background-color 0.3s ease; }
+.form-group input[type="file"]::-webkit-file-upload-button:hover { background-color: rgba(255, 255, 255, 0.3); }
+.form-group small { display: block; margin-top: 5px; font-size: 0.85rem; color: #eee; }
+.submit-button { width: 100%; padding: 15px; font-size: 1.1rem; margin-top: 10px; }
+.back-link { display: block; text-align: center; margin-top: 20px; color: #eee; text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
 .back-link:hover { color: #fff; }
 .back-link .icon { margin-right: 5px; }
 
+.page-container { width: 95%; max-width: 1200px; margin: 20px auto; padding: 40px 0; }
+.page-header { padding: 15px 25px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+.page-header h1 { color: #fff; font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); display: flex; align-items: center; margin: 0; }
+.page-header h1 .icon { margin-right: 12px; font-size: 1.1em; }
+.page-header .back-button { padding: 8px 15px; font-size: 0.9rem; }
 
-/* Activity Feed Page Styles (`activity.html`) */
-.activity-container {
-    width: 95%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
+.activity-container { width: 95%; max-width: 1200px; margin: 0 auto; padding: 40px 0; }
+.activity-container h1 { text-align: center; color: #fff; margin-bottom: 30px; font-size: 2.2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; }
+.activity-container h1 .icon { margin-right: 15px; }
+.activity-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.activity-header .back-button { padding: 10px 20px; font-size: 0.9rem; }
+.activity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+.activity-card { display: flex; flex-direction: column; overflow: hidden; padding: 0; color: #eee; }
+.activity-card .card-image-placeholder { height: 180px; background-color: rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; justify-content: center; align-items: center; color: #ddd; font-size: 1.2rem; text-align: center; }
+.activity-card .card-image-placeholder i { font-size: 2rem; margin-bottom: 5px; }
+.activity-card .card-image-placeholder small { font-size: 0.8rem; max-width: 90%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.activity-card .card-image-placeholder.no-image { font-size: 1rem; padding: 10px; height: auto; min-height: 60px; background-color: rgba(0, 0, 0, 0.15); }
+.activity-card .card-image-placeholder.no-image i { font-size: 1.5rem; margin-bottom: 5px; }
+.activity-card .card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; background-color: rgba(0,0,0,0.1); }
+.activity-card .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.activity-card .card-title { font-size: 1.25rem; font-weight: 600; color: #fff; margin: 0; padding-right: 10px; }
+.activity-card .card-type-badge { padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 500; color: #fff; white-space: nowrap; }
+.activity-card .card-type-badge.donate { background-color: rgba(40, 167, 69, 0.7); border: 1px solid rgba(40, 167, 69, 0.9); }
+.activity-card .card-type-badge.request { background-color: rgba(255, 193, 7, 0.7); border: 1px solid rgba(255, 193, 7, 0.9); color: #333; }
+.activity-card .card-description { font-size: 0.95rem; color: #eee; margin-bottom: 15px; flex-grow: 1; line-height: 1.5; }
+.activity-card .card-footer { padding-top: 15px; margin-top: auto; font-size: 0.85rem; color: #ddd; }
+.activity-card .card-footer div { margin-bottom: 8px; display: flex; align-items: center; }
+.activity-card .card-footer div:last-child { margin-bottom: 0; }
+.activity-card .card-footer .icon { margin-right: 10px; width: 1.2em; text-align: center; color: #a29bfe; }
+.activity-card .card-footer .fa-user { color: #fd79a8; } .activity-card .card-footer .fa-envelope { color: #fab1a0; } .activity-card .card-footer .fa-phone { color: #ffeaa7; }
+.loading-message, .no-activity-message { grid-column: 1 / -1; text-align: center; color: #fff; font-size: 1.2rem; padding: 50px 20px; }
+.no-activity-message .icon { font-size: 1.5rem; margin-right: 10px; color: #a29bfe; }
 
-.activity-container h1 {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 30px;
-    font-size: 2.2rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.activity-container h1 .icon {
-    margin-right: 15px;
-}
+.seniors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.senior-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; /* Needs .glass */ }
+.senior-card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2); }
+.senior-pic { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255, 255, 255, 0.4); margin-bottom: 15px; background-color: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; }
+.senior-pic.default-icon::before { content: '\f501'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 40px; color: rgba(255, 255, 255, 0.7); }
+.senior-card h4 { font-size: 1.25rem; color: #fff; margin-bottom: 5px; }
+.senior-card .senior-year { font-size: 0.9rem; color: #ddd; margin-bottom: 15px; }
+.senior-skills { margin-bottom: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.senior-skills .skill-badge { background-color: rgba(0, 0, 0, 0.2); color: #eee; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; border: 1px solid rgba(255, 255, 255, 0.1); }
+.senior-card .senior-actions { margin-top: auto; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; display: flex; justify-content: center; gap: 10px; }
+.senior-card .senior-actions .button-link, .senior-card .senior-actions button { padding: 8px 15px; font-size: 0.85rem; flex-grow: 0; }
+.senior-card .senior-actions .linkedin-link { background-image: linear-gradient(135deg, #0077B5, #005e90); border: none; }
+.senior-card .senior-actions .linkedin-link:hover { background-image: linear-gradient(135deg, #008cd1, #006cae); }
+.senior-card .senior-actions .connect-button { background-image: linear-gradient(135deg, rgba(40, 167, 69, 0.8), rgba(30, 130, 50, 0.8)); border: none; }
+.senior-card .senior-actions .connect-button:hover { background-image: linear-gradient(135deg, rgba(45, 180, 75, 0.9), rgba(35, 145, 55, 0.9)); }
 
-.activity-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-}
-
-.back-button { /* Back button specific to activity feed */
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    /* Uses standard button style */
-}
-
-.activity-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.activity-card {
-    /* Inherits .glass style */
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding: 0; /* Remove padding from .glass, apply internally */
-    color: #eee;
-}
-
-.activity-card .card-image-placeholder {
-    height: 180px;
-    background-color: rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ddd;
-    font-size: 1.2rem;
-    text-align: center;
-    /* background-image set dynamically */
-}
-.activity-card .card-image-placeholder i {
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-.activity-card .card-image-placeholder small {
-    font-size: 0.8rem;
-    max-width: 90%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.activity-card .card-image-placeholder.no-image {
-    font-size: 1rem;
-    padding: 10px;
-    height: auto;
-    min-height: 60px;
-    background-color: rgba(0, 0, 0, 0.15);
-}
-.activity-card .card-image-placeholder.no-image i {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-.activity-card .card-content {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0,0,0,0.1);
-}
-
-.activity-card .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 12px;
-}
-
-.activity-card .card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #fff;
-    margin: 0;
-    padding-right: 10px;
-}
-
-.activity-card .card-type-badge {
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #fff;
-    white-space: nowrap;
-}
-.activity-card .card-type-badge.donate {
-    background-color: rgba(40, 167, 69, 0.7);
-    border: 1px solid rgba(40, 167, 69, 0.9);
-}
-.activity-card .card-type-badge.request {
-    background-color: rgba(255, 193, 7, 0.7);
-    border: 1px solid rgba(255, 193, 7, 0.9);
-    color: #333;
-}
-
-.activity-card .card-description {
-    font-size: 0.95rem;
-    color: #eee;
-    margin-bottom: 15px;
-    flex-grow: 1;
-    line-height: 1.5;
-}
-
-.activity-card .card-footer {
-    padding-top: 15px;
-    margin-top: auto;
-    font-size: 0.85rem;
-    color: #ddd;
-}
-.activity-card .card-footer div {
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-}
-.activity-card .card-footer div:last-child {
-    margin-bottom: 0;
-}
-.activity-card .card-footer .icon {
-    margin-right: 10px;
-    width: 1.2em;
-    text-align: center;
-    color: #a29bfe; /* Accent color */
-}
-/* Specific icon colors in activity card footer */
-.activity-card .card-footer .fa-user { color: #fd79a8; }
-.activity-card .card-footer .fa-envelope { color: #fab1a0; }
-.activity-card .card-footer .fa-phone { color: #ffeaa7; }
-
-
-.loading-message, .no-activity-message {
-    grid-column: 1 / -1;
-    text-align: center;
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 50px 20px;
-}
-.no-activity-message .icon {
-    font-size: 1.5rem;
-    margin-right: 10px;
-    color: #a29bfe;
-}
-
-
-/* --- Profile Page Styles (`profile.html`) - MERGED & ENHANCED --- */
-/* Removed .profile-page-container as body/main handles layout now */
-/* .profile-page-container { ... } */
-
-.profile-card {
-    /* Inherits .glass style properties, potentially overridden */
-    background: rgba(255, 255, 255, 0.1); /* Subtle glass */
-    padding: 25px 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto; /* Keep auto margins for centering */
-    overflow: hidden; /* Contain elements */
-    color: #eee; /* Default text color */
-}
-
-.profile-header, .profile-header-section { /* Merging header container concepts */
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 25px;
-}
-
-.profile-pic-container, .profile-picture-area { /* Merging picture container concepts */
-    position: relative;
-    margin-right: 25px;
-    flex-shrink: 0;
-}
-
-.profile-pic, .profile-pic-placeholder { /* Merging picture element concepts */
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.2); /* Placeholder background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff; /* Added for icon */
-    font-size: 2.5rem; /* Icon size if no image */
-}
-/* Default User Icon Styling */
-.profile-pic.default-icon::before,
-.profile-pic-placeholder.default-icon::before {
-    content: '\f007'; /* Font Awesome user icon */
-    font-family: 'Font Awesome 6 Free'; /* Ensure correct font family */
-    font-weight: 900; /* Solid style */
-    font-size: 40px; /* Adjusted size */
-    color: rgba(255, 255, 255, 0.7); /* Lighter icon */
-}
-
-.profile-pic-edit-button {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #6c5ce7; /* Example using primary color from body */
-    color: white;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.profile-pic-edit-button:hover {
-    background-color: #5a4bdb; /* Darker version */
-}
-.profile-pic-edit-button i {
-    font-size: 14px;
-}
-
-.profile-name-section, .profile-name-area { /* Merging name area concepts */
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.profile-name-display, #profile-name-display-container { /* Merging display containers */
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px; /* Space before badge */
-}
-
-#profile-name {
-    font-size: 1.8em;
-    color: #fff;
-    margin: 0 10px 0 0; /* Right margin for edit button space */
-    font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-}
-
-/* Inline Edit/Save/Cancel Buttons - Combined Styling */
-.edit-button, .save-button, .cancel-button, .inline-edit-button {
-    background: none;
-    border: none;
-    color: #ccc; /* Default/edit color */
-    cursor: pointer;
-    padding: 5px;
-    font-size: 1rem; /* Consistent size */
-    transition: color 0.3s ease;
-    margin-left: 5px; /* Added margin */
-}
-.edit-button:hover, .inline-edit-button:hover { color: #fff; } /* White hover for edit */
-.save-button, .inline-edit-button.save { color: #66bb6a; } /* Softer Green */
-.cancel-button, .inline-edit-button.cancel { color: #ef5350; } /* Softer Red */
+.profile-card { background: rgba(255, 255, 255, 0.1); padding: 25px 30px; border-radius: 15px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.18); width: 100%; max-width: 600px; margin: 20px auto; overflow: hidden; color: #eee; }
+.profile-header, .profile-header-section { display: flex; align-items: center; margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding: 25px; }
+.profile-pic-container, .profile-picture-area { position: relative; margin-right: 25px; flex-shrink: 0; }
+.profile-pic, .profile-pic-placeholder { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255, 255, 255, 0.5); background-color: rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2.5rem; }
+.profile-pic.default-icon::before, .profile-pic-placeholder.default-icon::before { content: '\f007'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 40px; color: rgba(255, 255, 255, 0.7); }
+.profile-pic-edit-button { position: absolute; bottom: 0; right: 0; background-color: #6c5ce7; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 2px solid white; cursor: pointer; transition: background-color 0.3s ease; }
+.profile-pic-edit-button:hover { background-color: #5a4bdb; }
+.profile-pic-edit-button i { font-size: 14px; }
+.profile-name-section, .profile-name-area { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+.profile-name-display, #profile-name-display-container { display: flex; align-items: center; margin-bottom: 8px; }
+#profile-name { font-size: 1.8em; color: #fff; margin: 0 10px 0 0; font-weight: 600; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+.edit-button, .save-button, .cancel-button, .inline-edit-button { background: none; border: none; color: #ccc; cursor: pointer; padding: 5px; font-size: 1rem; transition: color 0.3s ease; margin-left: 5px; }
+.edit-button:hover, .inline-edit-button:hover { color: #fff; }
+.save-button, .inline-edit-button.save { color: #66bb6a; }
+.cancel-button, .inline-edit-button.cancel { color: #ef5350; }
 .save-button:hover, .inline-edit-button.save:hover { color: #81c784; }
 .cancel-button:hover, .inline-edit-button.cancel:hover { color: #e57373; }
-
-/* Name Edit Input Container */
-#profile-name-edit-container {
-    display: none; /* Initially hidden */
-    align-items: center;
-    width: 100%; /* Ensure it takes full width */
-}
-
-#edit-name-input {
-    flex-grow: 1;
-    margin-right: 8px;
-    background-color: rgba(255, 255, 255, 0.15); /* Consistent input style */
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 8px 12px; /* Consistent padding */
-    border-radius: 6px; /* Consistent radius */
-    font-size: 1.5rem; /* Match display name size */
-    outline: none;
-}
+#profile-name-edit-container { display: none; align-items: center; width: 100%; }
+#edit-name-input { flex-grow: 1; margin-right: 8px; background-color: rgba(255, 255, 255, 0.15); color: white; border: 1px solid rgba(255, 255, 255, 0.3); padding: 8px 12px; border-radius: 6px; font-size: 1.5rem; outline: none; }
 #edit-name-input::placeholder { color: rgba(255, 255, 255, 0.7); }
-
-
-/* Level Badge Styling - ENHANCED MERGE */
-.level-badge {
-    display: inline-flex; /* Use flex */
-    align-items: center;
-    padding: 5px 12px;
-    border-radius: 20px; /* More rounded */
-    font-size: 0.9em; /* Slightly larger */
-    font-weight: bold; /* Bolder */
-    text-transform: uppercase; /* Uppercase */
-    letter-spacing: 0.5px; /* Spacing */
-    margin-top: 5px;
-    vertical-align: middle;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Added shadow */
-    color: white; /* Default text */
-}
-.level-badge .icon {
-    margin-right: 6px;
-    font-size: 0.9em;
-    opacity: 0.9;
-}
-/* Combined & Refined Level Badge Colors (Using second snippet's colors) */
-.level-badge.level-new { background-color: #6c757d; } /* Grey */
-.level-badge.level-junior { background-color: #17a2b8; } /* Info Blue */
-.level-badge.level-contributor { background-color: #28a745; } /* Success Green */
-.level-badge.level-senior { background-color: #ffc107; color: #333; } /* Warning Yellow */
-.level-badge.level-super { background-color: #dc3545; } /* Danger Red */
-
-
-/* Profile Details Section - MERGED */
-.profile-details, .profile-details-section { /* Merge containers */
-    padding: 25px; /* Consistent padding */
-    display: grid; /* Use grid layout */
-    gap: 15px;
-    margin-bottom: 25px; /* Added margin */
-}
-
-.detail-item, .profile-detail-item { /* Merge item styles */
-    display: flex;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: #eee;
-}
-
-.detail-item .icon, .profile-detail-item .icon { /* Merge icon styles */
-    color: #a29bfe; /* Accent color */
-    margin-right: 15px; /* Wider margin */
-    font-size: 1.1em;
-    width: 1.5em; /* Wider fixed width */
-    text-align: center;
-    opacity: 0.9;
-}
-
-.detail-label { /* Style for label part */
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.8);
-    margin-right: 8px;
-}
-
-.detail-value, .profile-detail-item strong { /* Merge value/strong text */
-    color: #fff;
-    font-weight: 600; /* Ensure consistent weight */
-    flex-grow: 1;
-}
-
-/* Year Editing Elements - Merged */
-.year-select-container, .profile-detail-item.year-edit { /* Merge containers */
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    /* These styles apply when the 'year-edit' class is added */
-}
-
-#profile-year, .profile-detail-item.year-edit select { /* Merge select elements */
-    flex-grow: 1;
-    margin: 0 10px 0 0; /* Consistent margin */
-    padding: 10px 12px; /* Consistent padding */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.15);
-    font-size: 0.95rem;
-    color: #eee;
-    font-family: inherit;
-    outline: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23eeeeee' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 12px;
-}
-#profile-year option, .profile-detail-item.year-edit select option { /* Merge option styles */
-    background-color: #3a3f51; /* Darker background */
-    color: #eee;
-}
-
-.small-save-button, .profile-detail-item.year-edit button { /* Merge save buttons */
-    padding: 10px 15px; /* Consistent padding */
-    font-size: 0.9rem;
-    background-color: rgba(76, 175, 80, 0.7); /* Semi-transparent save */
-    border: none;
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-    min-width: auto; /* Allow shrinking */
-}
-.small-save-button:hover, .profile-detail-item.year-edit button:hover {
-    background-color: rgba(76, 175, 80, 0.9);
-}
-.small-save-button .icon, .profile-detail-item.year-edit button .icon {
-    margin-right: 6px;
-    width: auto;
-    color: #fff;
-}
-
-/* Profile Actions (Share Button, etc.) */
-.profile-actions {
-    margin-top: 20px;
-    text-align: center;
-    padding: 0 25px 25px; /* Add padding to bottom */
-}
-
-.action-button { /* General styling for action buttons */
-    /* Inherits base button styling */
-    padding: 10px 20px;
-    border-radius: 5px; /* Slightly different radius */
-    font-size: 1em;
-}
-.action-button:active { transform: scale(0.98); } /* Keep unique active effect */
-
-.share-button {
-    background-color: #17a2b8; /* Info Blue */
-    color: white;
-    /* Inherits .action-button, .button styles */
-}
-.share-button:hover {
-    background-color: #138496; /* Darker Info Blue */
-}
+.profile-level-display { margin-top: 5px; }
+.level-badge { display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 20px; font-size: 0.9em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 5px; vertical-align: middle; box-shadow: 0 2px 4px rgba(0,0,0,0.2); color: white; }
+.level-badge .icon { margin-right: 6px; font-size: 0.9em; opacity: 0.9; }
+.level-badge.level-new { background-color: #6c757d; } .level-badge.level-junior { background-color: #17a2b8; } .level-badge.level-contributor { background-color: #28a745; } .level-badge.level-senior { background-color: #ffc107; color: #333; } .level-badge.level-super { background-color: #dc3545; }
+.profile-details, .profile-details-section { padding: 25px; display: grid; gap: 15px; margin-bottom: 25px; }
+.detail-item, .profile-detail-item { display: flex; align-items: center; background: rgba(0, 0, 0, 0.1); padding: 10px 15px; border-radius: 8px; font-size: 1rem; color: #eee; }
+.detail-item .icon, .profile-detail-item .icon { color: #a29bfe; margin-right: 15px; font-size: 1.1em; width: 1.5em; text-align: center; opacity: 0.9; }
+.detail-label { font-weight: bold; color: rgba(255, 255, 255, 0.8); margin-right: 8px; }
+.detail-value, .profile-detail-item strong { color: #fff; font-weight: 600; flex-grow: 1; }
+.year-select-container, .profile-detail-item.year-edit { display: flex; align-items: center; flex-grow: 1; }
+#profile-year, .profile-detail-item.year-edit select { flex-grow: 1; margin: 0 10px 0 0; padding: 10px 12px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 6px; background-color: rgba(255, 255, 255, 0.15); font-size: 0.95rem; color: #eee; font-family: inherit; outline: none; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23eeeeee' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 12px; }
+#profile-year option, .profile-detail-item.year-edit select option { background-color: #3a3f51; color: #eee; }
+.small-save-button, .profile-detail-item.year-edit button { padding: 10px 15px; font-size: 0.9rem; background-color: rgba(76, 175, 80, 0.7); border: none; color: #fff; border-radius: 6px; cursor: pointer; transition: background-color 0.3s ease; white-space: nowrap; min-width: auto; }
+.small-save-button:hover, .profile-detail-item.year-edit button:hover { background-color: rgba(76, 175, 80, 0.9); }
+.small-save-button .icon, .profile-detail-item.year-edit button .icon { margin-right: 6px; width: auto; color: #fff; }
+.profile-actions { margin-top: 20px; text-align: center; padding: 0 25px 25px; }
+.action-button { padding: 10px 20px; border-radius: 5px; font-size: 1em; }
+.action-button:active { transform: scale(0.98); }
+.share-button { background-image: linear-gradient(135deg, #17a2b8, #117a8b); border: none; color: white; }
+.share-button:hover { background-image: linear-gradient(135deg, #19b1c9, #138ca0); }
 .share-button .icon { margin-right: 8px; }
-
-/* --- ADDED share feedback style --- */
-#share-feedback {
-    transition: opacity 0.5s ease-in-out;
-}
-
-/* Back Link for Profile Card */
-.profile-back-link {
-    display: block;
-    text-align: center;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.15);
-    color: #eee;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    /* Apply to the 'a' tag within .profile-card if needed */
-}
-.profile-back-link:hover {
-    background-color: rgba(0, 0, 0, 0.25);
-    color: #fff;
-}
+#share-feedback { transition: opacity 0.5s ease-in-out; margin-top: 10px; font-size: 0.9em; color: #ddd; display: none;}
+.profile-back-link { display: block; text-align: center; padding: 15px; background-color: rgba(0, 0, 0, 0.15); color: #eee; text-decoration: none; font-size: 0.95rem; transition: background-color 0.3s ease, color 0.3s ease; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+.profile-back-link:hover { background-color: rgba(0, 0, 0, 0.25); color: #fff; }
 .profile-back-link .icon { margin-right: 8px; }
 
+.chat-container { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-radius: 18px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); width: 450px; max-width: 100%; height: 75vh; max-height: 700px; display: flex; flex-direction: column; color: white; margin: auto; overflow: hidden; }
+.chat-container *, .chat-container *::before, .chat-container *::after { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+.chat-header { padding: 15px 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); display: flex; align-items: center; gap: 15px; flex-shrink: 0; background: rgba(0, 0, 0, 0.1); }
+.chat-back-button { background: none; border: none; color: rgba(255, 255, 255, 0.8); font-size: 1.3em; cursor: pointer; padding: 5px; margin-right: 5px; transition: color 0.3s ease; }
+.chat-back-button:hover { color: white; }
+.user-avatar { width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(255, 255, 255, 0.2); }
+.user-avatar i { font-size: 1.3em; color: rgba(255, 255, 255, 0.9); }
+.chat-header h3 { margin: 0; font-weight: 500; font-size: 1.1em; }
+.chat-header p { font-size: 0.8em; opacity: 0.8; margin: 0; }
+.chat-messages { flex: 1; padding: 20px 15px 20px 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.3) transparent; }
+.chat-messages::-webkit-scrollbar { width: 6px; } .chat-messages::-webkit-scrollbar-track { background: transparent; } .chat-messages::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.4); border-radius: 6px; border: none; }
+.message { max-width: 75%; padding: 10px 15px; border-radius: 18px; backdrop-filter: blur(5px); position: relative; word-wrap: break-word; line-height: 1.45; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); color: #eee; }
+.message.sent { background: linear-gradient(135deg, rgba(108, 92, 231, 0.4), rgba(162, 155, 254, 0.3)); border: 1px solid rgba(255, 255, 255, 0.1); align-self: flex-end; border-radius: 18px 18px 5px 18px; color: white; }
+.message.received { background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); align-self: flex-start; border-radius: 18px 18px 18px 5px; }
+.message-time { font-size: 0.75em; opacity: 0.6; margin-top: 6px; display: block; text-align: right; clear: both; }
+.message.sent .message-time { color: rgba(255, 255, 255, 0.7); } .message.received .message-time { color: rgba(255, 255, 255, 0.6); }
+.chat-input { padding: 15px 20px; border-top: 1px solid rgba(255, 255, 255, 0.15); display: flex; gap: 10px; flex-shrink: 0; background: rgba(0, 0, 0, 0.1); }
+.chat-input input[type="text"] { flex: 1; padding: 12px 18px; border: none; border-radius: 20px; background: rgba(0, 0, 0, 0.25); color: white; font-size: 14px; outline: none; }
+.chat-input input[type="text"]::placeholder { color: rgba(255, 255, 255, 0.5); }
+.chat-input input[type="text"]:focus { background: rgba(0, 0, 0, 0.3); box-shadow: 0 0 0 2px rgba(162, 155, 254, 0.5); }
+.chat-input button { padding: 0; width: 44px; height: 44px; border: none; border-radius: 50%; background: #6c5ce7; color: white; cursor: pointer; transition: background-color 0.3s ease, transform 0.1s ease; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.chat-input button:hover { background: #5a4bdb; transform: scale(1.05); } .chat-input button:active { transform: scale(0.98); }
+.chat-input button i { font-size: 1.1em; margin: 0; }
+.typing-indicator { padding: 5px 20px 5px; font-size: 0.8em; font-style: italic; opacity: 0.7; display: none; flex-shrink: 0; height: 20px; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+.float { animation: float 4s ease-in-out infinite; }
 
-/* --- Responsive Adjustments --- */
+
 @media (max-width: 768px) {
-    /* --- MERGED body responsive style --- */
-    body {
-        padding: 10px;
-        /* align-items: flex-start; */ /* May not be needed if centering main */
-        justify-content: flex-start; /* Align top on mobile */
-        padding-top: 30px;
-    }
-    /* --- ADDED main responsive style --- */
-     main {
-         align-items: flex-start; /* Align card to top within main on mobile */
-     }
-
-    .login-container {
-        flex-direction: column;
-        width: 95%;
-        min-height: 0;
-        height: auto;
-    }
-    .login-left, .login-right {
-        flex: none;
-        width: 100%;
-        min-height: 350px;
-        border-radius: 0;
-    }
-    .login-left {
-        border-radius: 16px 16px 0 0;
-        padding: 40px 20px;
-    }
-    .login-right {
-        border-radius: 0 0 16px 16px;
-        min-height: 250px;
-    }
-    .dashboard-grid {
-        grid-template-columns: 1fr;
-    }
-    .dashboard-header-area {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .college-header {
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    .profile-link {
-        text-align: center;
-        width: 100%;
-    }
-    .form-page-container, .activity-container { /* Profile container removed */
-        padding: 30px 10px;
-        align-items: flex-start;
-    }
-    .glass {
-        padding: 20px;
-    }
-    .form-container h2, .activity-container h1 {
-        font-size: 1.6rem;
-    }
-    .activity-grid {
-         grid-template-columns: 1fr;
-    }
-    .profile-card {
-         max-width: 95%;
-    }
-    .profile-header, .profile-header-section {
-         padding: 20px;
-         flex-direction: column;
-         text-align: center;
-         padding-bottom: 15px; /* Adjust padding */
-         margin-bottom: 15px; /* Adjust margin */
-     }
-     .profile-pic-container, .profile-picture-area {
-         margin-right: 0;
-         margin-bottom: 15px;
-     }
-     .profile-name-section, .profile-name-area {
-         align-items: center;
-     }
-     #profile-name {
-           font-size: 1.5em; /* Adjust size for medium screens */
-     }
-     .profile-details, .profile-details-section {
-           padding: 20px; /* Adjusted padding */
-           gap: 12px; /* Reduce gap */
-     }
-     .detail-item, .profile-detail-item {
-        font-size: 0.95rem;
-        padding: 8px 12px; /* Adjust padding */
-     }
-     .detail-item .icon, .profile-detail-item .icon {
-         margin-right: 10px;
-     }
+    body { padding: 10px; justify-content: flex-start; padding-top: 30px; }
+     main { align-items: flex-start; }
+    .login-container { flex-direction: column; width: 95%; min-height: 0; height: auto; }
+    .login-left, .login-right { flex: none; width: 100%; min-height: 350px; border-radius: 0; }
+    .login-left { border-radius: 16px 16px 0 0; padding: 40px 20px; }
+    .login-right { border-radius: 0 0 16px 16px; min-height: 250px; }
+    .dashboard-grid { grid-template-columns: 1fr; }
+    .dashboard-header-area { flex-direction: column; align-items: stretch; gap: 10px;}
+    .college-header, .dashboard-profile-widget { margin-bottom: 10px; width: 100%; justify-content: center; }
+    .dashboard-profile-widget { padding: 8px 15px; }
+    .form-page-container, .activity-container, .page-container { padding: 30px 10px; align-items: flex-start; }
+    .glass { padding: 20px; }
+    .form-container h2, .activity-container h1, .page-header h1 { font-size: 1.6rem; }
+    .activity-grid, .seniors-grid { grid-template-columns: 1fr; }
+    .profile-card { max-width: 95%; }
+    .profile-header, .profile-header-section { padding: 20px; flex-direction: column; text-align: center; padding-bottom: 15px; margin-bottom: 15px; }
+    .profile-pic-container, .profile-picture-area { margin-right: 0; margin-bottom: 15px; }
+    .profile-name-section, .profile-name-area { align-items: center; }
+    #profile-name { font-size: 1.5em; }
+    .profile-details, .profile-details-section { padding: 20px; gap: 12px; }
+    .detail-item, .profile-detail-item { font-size: 0.95rem; padding: 8px 12px; }
+    .detail-item .icon, .profile-detail-item .icon { margin-right: 10px; }
+    .page-header { flex-direction: column; align-items: center; gap: 15px; }
+    .page-header h1 { text-align: center; }
 }
 
 @media (max-width: 480px) {
-    .login-left .logo { font-size: 2rem; }
-    .login-left .logo i { font-size: 2.2rem; }
-
-    .card {
-        min-height: auto;
-        padding-bottom: 15px;
-    }
-    .card h3 { font-size: 1.15rem; }
-    .card .content { font-size: 0.9rem; }
-    .card .actions {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 10px;
-    }
-    .card button, .card .button-link {
-        flex-grow: 1;
-        width: 100%; /* Make buttons full width in column */
-        max-width: none;
-        font-size: 0.9rem;
-        padding: 10px 15px;
-    }
-
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group input[type="tel"],
-    .form-group textarea,
-    .form-group select {
-        padding: 10px 12px;
-        font-size: 0.95rem;
-    }
-    .submit-button {
-        padding: 12px;
-        font-size: 1rem;
-    }
-
-    .activity-card .card-title { font-size: 1.1rem; }
-    .activity-card .card-description { font-size: 0.9rem; }
-    .activity-card .card-footer { font-size: 0.8rem; }
-    .activity-card .card-footer div { margin-bottom: 6px; }
-
-    #profile-name {
-         font-size: 1.3em; /* Further adjust name size */
-    }
-    .level-badge {
-        font-size: 0.8rem;
-        padding: 4px 10px;
-    }
-    .detail-item, .profile-detail-item {
-        font-size: 0.9rem; /* Further adjust detail font */
-    }
-    #profile-year, .profile-detail-item.year-edit select {
-        font-size: 0.9rem;
-        padding: 6px 8px;
-    }
-    .small-save-button, .profile-detail-item.year-edit button {
-        padding: 8px 10px;
-        font-size: 0.8rem;
-    }
-    .profile-header, .profile-header-section {
-        padding: 15px; /* Reduce padding further */
-    }
-    .profile-details, .profile-details-section {
-        padding: 15px;
-    }
-    .profile-pic, .profile-pic-placeholder {
-        width: 80px; /* Smaller pic on smallest screens */
-        height: 80px;
-    }
-     .profile-pic.default-icon::before,
-     .profile-pic-placeholder.default-icon::before {
-        font-size: 30px; /* Adjust icon size */
-     }
-     .profile-pic-edit-button {
-        width: 25px; height: 25px;
-     }
-     .profile-pic-edit-button i { font-size: 12px; }
-
+    .login-left .logo { font-size: 2rem; } .login-left .logo i { font-size: 2.2rem; }
+    .card { min-height: auto; padding-bottom: 15px; } .card h3 { font-size: 1.15rem; } .card .content { font-size: 0.9rem; }
+    .card .actions { flex-direction: column; gap: 10px; }
+    .card button, .card .button-link { flex-grow: 1; width: 100%; max-width: none; font-size: 0.9rem; padding: 10px 15px; }
+    .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], .form-group textarea, .form-group select { padding: 10px 12px; font-size: 0.95rem; }
+    .submit-button { padding: 12px; font-size: 1rem; background: linear-gradient(135deg, rgba(241, 196, 15, 0.7) 0%, rgba(243, 156, 18, 0.7) 100%); }
+    .activity-card .card-title { font-size: 1.1rem; } .activity-card .card-description { font-size: 0.9rem; } .activity-card .card-footer { font-size: 0.8rem; } .activity-card .card-footer div { margin-bottom: 6px; }
+    #profile-name { font-size: 1.3em; } .level-badge { font-size: 0.8rem; padding: 4px 10px; } .detail-item, .profile-detail-item { font-size: 0.9rem; } #profile-year, .profile-detail-item.year-edit select { font-size: 0.9rem; padding: 6px 8px; }
+    .small-save-button, .profile-detail-item.year-edit button { padding: 8px 10px; font-size: 0.8rem; }
+    .profile-header, .profile-header-section { padding: 15px; } .profile-details, .profile-details-section { padding: 15px; }
+    .profile-pic, .profile-pic-placeholder { width: 80px; height: 80px; } .profile-pic.default-icon::before, .profile-pic-placeholder.default-icon::before { font-size: 30px; } .profile-pic-edit-button { width: 25px; height: 25px; } .profile-pic-edit-button i { font-size: 12px; }
 }
-/* --- Seniors List Page Styles (`seniors.html`) --- */
-
-.page-container { /* A general container for pages like activity, seniors */
-    width: 95%;
-    max-width: 1200px;
-    margin: 20px auto; /* Add some margin */
-    padding: 20px 0;
-}
-
-.page-header {
-    /* Inherits .glass styling */
-    padding: 15px 25px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
-}
-
-.page-header h1 {
-    color: #fff;
-    font-size: 1.8rem; /* Adjusted size */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    margin: 0; /* Remove default margin */
-    margin-bottom: 10px; /* Add space below on wrap */
-}
-.page-header h1 .icon {
-    margin-right: 12px;
-    font-size: 1.1em;
-}
-
-/* Style for back button in header */
-.page-header .back-button {
-    /* Inherits .button-link */
-    padding: 8px 15px;
-    font-size: 0.9rem;
-    margin-bottom: 10px; /* Add space below on wrap */
-}
-
-
-.seniors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
-    gap: 25px;
-}
-
-.senior-card {
-    /* Inherits .glass style */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px; /* Apply padding inside the card */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.senior-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-}
-
-.senior-pic {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    margin-bottom: 15px;
-    background-color: rgba(255, 255, 255, 0.1); /* Placeholder bg */
-}
-/* Default icon if no image */
-.senior-pic.default-icon::before {
-     content: '\f007'; /* Font Awesome user icon */
-     font-family: 'Font Awesome 6 Free';
-     font-weight: 900;
-     font-size: 40px;
-     color: rgba(255, 255, 255, 0.6);
-     /* Needs display: flex; align-items: center; justify-content: center; on .senior-pic */
-}
-.senior-card .senior-pic { /* Ensure flex properties for icon centering */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.senior-card h4 { /* Senior Name */
-    font-size: 1.25rem;
-    color: #fff;
-    margin-bottom: 5px;
-}
-
-.senior-card .senior-year { /* Year of Study */
-    font-size: 0.9rem;
-    color: #ddd;
-    margin-bottom: 15px;
-}
-
-.senior-skills {
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-}
-
-.senior-skills .skill-badge {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #eee;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.senior-card .senior-actions {
-    margin-top: auto; /* Push actions to bottom */
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Center buttons */
-    gap: 10px;
-}
-
-.senior-card .senior-actions .button-link,
-.senior-card .senior-actions button {
-    /* Inherits base button style */
-    padding: 8px 15px; /* Smaller buttons */
-    font-size: 0.85rem;
-    flex-grow: 0; /* Don't allow to grow */
-}
-.senior-card .senior-actions .linkedin-link {
-    background-color: #0077B5; /* LinkedIn blue */
-    border-color: #0077B5;
-}
-.senior-card .senior-actions .linkedin-link:hover {
-    background-color: #005e90;
-}
-.senior-card .senior-actions .connect-button {
-    background-color: rgba(40, 167, 69, 0.7); /* Greenish */
-}
-.senior-card .senior-actions .connect-button:hover {
-     background-color: rgba(40, 167, 69, 0.9);
-}
-
-/* Adjust responsive styles if needed */
-@media (max-width: 768px) {
-    .page-header {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    .page-header h1 { text-align: center; }
-}
-/* --- Chat Interface Styles (Enhanced) --- */
-
-/* Re-apply box-sizing and font if needed, or ensure it's inherited */
-.chat-container *, .chat-container *::before, .chat-container *::after {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-.chat-container {
-    /* Inherits .glass properties - Adjust if applied directly */
-    background: rgba(255, 255, 255, 0.1); /* Slightly less intense white */
-    backdrop-filter: blur(15px); /* Increased blur */
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 18px; /* Slightly adjusted radius */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Softer border */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
-    width: 450px;
-    max-width: 100%;
-    height: 75vh; /* Adjusted height based on viewport */
-    max-height: 700px; /* Increased max height */
-    display: flex;
-    flex-direction: column;
-    color: white;
-    margin: auto;
-    overflow: hidden; /* Prevent content overflow */
-}
-
-.chat-header {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Softer border */
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-shrink: 0;
-    background: rgba(0, 0, 0, 0.1); /* Subtle header background */
-}
-
-.chat-back-button {
-    background: none;
-    border: none;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.3em; /* Slightly larger */
-    cursor: pointer;
-    padding: 5px;
-    margin-right: 5px;
-    transition: color 0.3s ease;
-}
-.chat-back-button:hover {
-    color: white;
-}
-
-.user-avatar {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    /* Gradient background for avatar */
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.user-avatar i {
-    font-size: 1.3em; /* Adjusted icon size */
-    color: rgba(255, 255, 255, 0.9); /* Brighter icon */
-}
-
-.chat-header h3 {
-    margin: 0;
-    font-weight: 500; /* Slightly less bold */
-    font-size: 1.1em;
-}
-.chat-header p {
-    font-size: 0.8em;
-    opacity: 0.8; /* Slightly more visible */
-    margin: 0;
-}
-
-.chat-messages {
-    flex: 1;
-    padding: 20px 15px 20px 20px; /* Adjust padding slightly */
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* Slightly reduced gap */
-    /* Custom scrollbar */
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-}
-.chat-messages::-webkit-scrollbar { width: 6px; /* Thinner scrollbar */ }
-.chat-messages::-webkit-scrollbar-track { background: transparent; }
-.chat-messages::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 6px;
-    border: none; /* Remove border */
-}
-
-.message {
-    max-width: 75%; /* Slightly narrower max width */
-    padding: 10px 15px; /* Adjusted padding */
-    border-radius: 18px; /* More rounded */
-    backdrop-filter: blur(5px);
-    position: relative;
-    word-wrap: break-word;
-    line-height: 1.45;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on messages */
-    color: #eee; /* Ensure good contrast */
-}
-
-.message.sent {
-    /* Gradient for sent messages */
-    background: linear-gradient(135deg, rgba(108, 92, 231, 0.4), rgba(162, 155, 254, 0.3));
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    align-self: flex-end;
-    border-radius: 18px 18px 5px 18px; /* Custom shape */
-    color: white;
-}
-
-.message.received {
-    /* Slightly different background for received */
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    align-self: flex-start;
-    border-radius: 18px 18px 18px 5px; /* Custom shape */
-}
-
-.message-time {
-    font-size: 0.75em; /* Slightly larger */
-    opacity: 0.6; /* Slightly less opaque */
-    margin-top: 6px;
-    display: block;
-    text-align: right;
-    clear: both; /* Ensure it stays below content */
-}
-.message.sent .message-time { color: rgba(255, 255, 255, 0.7); }
-.message.received .message-time { color: rgba(255, 255, 255, 0.6); }
-
-.chat-input {
-    padding: 15px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Softer border */
-    display: flex;
-    gap: 10px;
-    flex-shrink: 0;
-    background: rgba(0, 0, 0, 0.1); /* Subtle background for input area */
-}
-
-.chat-input input[type="text"] {
-    flex: 1;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 20px; /* Pill shape */
-    background: rgba(0, 0, 0, 0.25); /* Darker input background */
-    color: white;
-    font-size: 14px;
-    outline: none; /* Remove focus outline */
-}
-.chat-input input[type="text"]::placeholder {
-    color: rgba(255, 255, 255, 0.5); /* Lighter placeholder */
-}
-
-
-.chat-input input[type="text"]:focus {
-    background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 0 2px rgba(162, 155, 254, 0.5); /* Subtle focus ring */
-}
-
-.chat-input button {
-    padding: 0; /* Remove padding, use width/height */
-    width: 44px; /* Square button */
-    height: 44px;
-    border: none;
-    border-radius: 50%; /* Circular button */
-    background: #6c5ce7; /* Use a theme color */
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    flex-shrink: 0;
-    display: flex; /* Center icon */
-    align-items: center;
-    justify-content: center;
-}
-
-.chat-input button:hover {
-    background: #5a4bdb; /* Darker theme color */
-    transform: scale(1.05); /* Slight scale effect */
-}
-.chat-input button:active {
-    transform: scale(0.98);
-}
-
-.chat-input button i {
-    font-size: 1.1em; /* Adjust icon size */
-    margin: 0; /* Remove default margin from .icon */
-}
-
-
-.typing-indicator {
-    padding: 5px 20px 5px; /* Reduced padding */
-    font-size: 0.8em; /* Smaller text */
-    font-style: italic;
-    opacity: 0.7;
-    display: none; /* Initially hidden */
-    flex-shrink: 0;
-    height: 20px; /* Reserve space */
-}
-
-/* Floating animations */
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); } /* Slightly less float */
-}
-
-.float {
-    animation: float 4s ease-in-out infinite; /* Slower animation */
-}
-
-/* --- End Chat Interface Styles --- */
