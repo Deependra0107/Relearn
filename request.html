@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Resource - Relearn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+     <div class="form-page-container">
+        <div class="form-container glass">
+            <h2><i class="fas fa-search icon"></i> Request Resource</h2>
+             <div class="college-display">
+                <i class="fas fa-university icon"></i> College: <span id="college-name-display">Loading...</span>
+            </div>
+
+            <form id="request-form">
+                 <div class="form-group">
+                    <label for="request-title"><i class="fas fa-book-open icon"></i> Resource Needed</label>
+                    <input type="text" id="request-title" name="request-title" required placeholder="e.g., Organic Chemistry Textbook by Paula Y. Bruice">
+                </div>
+                <div class="form-group">
+                    <label for="request-description"><i class="fas fa-info-circle icon"></i> Details / Reason</label>
+                    <textarea id="request-description" name="request-description" rows="4" required placeholder="Any specific edition, condition, or reason why you need it?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="request-category"><i class="fas fa-tags icon"></i> Category</label>
+                     <select id="request-category" name="request-category" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Notes">Notes</option>
+                        <option value="Books">Textbooks / Reference Books</option>
+                        <option value="Lab Manuals">Lab Manuals</option>
+                        <option value="Exam Papers">Previous Exam Papers</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="request-contact"><i class="fas fa-envelope icon"></i> Your Contact Email</label>
+                    <input type="email" id="request-contact" name="request-contact" required placeholder="So donors can reach you">
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-paper-plane icon"></i> Submit Request
+                </button>
+                 <a href="dashboard.html" class="back-link"><i class="fas fa-arrow-left icon"></i> Back to Dashboard</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

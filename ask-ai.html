@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask AI - Relearn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <a href="dashboard.html" class="chat-back-button" title="Back to Dashboard">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <div class="user-avatar float">
+                <i class="fas fa-robot"></i> </div>
+            <div>
+                <h3>Ask AI Helper</h3> <p style="font-size: 0.8em; opacity: 0.7;">Powered by Gemini</p> </div>
+        </div>
+
+        <div class="typing-indicator" id="ai-typing-indicator"> 
+            AI is thinking...
+        </div>
+
+        <div class="chat-messages" id="ai-chat-messages">
+            <div class="message received">
+                 Hello! How can I help you today? Ask me anything related to your studies.
+                 <span class="message-time">Now</span>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" placeholder="Ask your question..." id="ai-message-input"> 
+            <button id="ai-send-btn"><i class="fas fa-paper-plane"></i></button> 
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Relearn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container glass"> <div class="dashboard-header-area">
+            <div class="college-header">
+                <i class="fas fa-university icon"></i>
+                <h2 id="college-header-display">Loading College...</h2>
+            </div>
+            <a href="profile.html" class="profile-link button-link">
+                <i class="fas fa-user-circle icon"></i> Profile
+            </a>
+        </div>
+        <div class="dashboard-grid">
+            <a href="activity.html" id="activity-link" class="card glass card-link"> <h3><i class="fas fa-history icon"></i>Store</h3>
+                 <div class="content">
+                      <p>View recent donations and requests from your college community.</p>
+                 </div>
+                 <span class="button-link view-feed-button">
+                      <i class="fas fa-eye icon"></i> View Feed
+                 </span>
+            </a>
+
+             <div class="card glass"> <h3><i class="fas fa-exchange-alt icon"></i> Share Resources</h3>
+                 <div class="content">
+                    <p>Contribute materials or ask for what you need.</p>
+                 </div>
+                 <div class="actions">
+                      <button id="donate-button">
+                           <i class="fas fa-plus-circle icon"></i> Donate
+                      </button>
+                      <button id="request-button">
+                           <i class="fas fa-search icon"></i> Request
+                      </button>
+                 </div>
+             </div>
+
+            <div class="card glass"> <h3><i class="fas fa-user-friends icon"></i> Ask a Senior</h3>
+                 <div class="content">
+                      <p>Connect with seniors for guidance and mentorship.</p>
+                 </div>
+                 <button id="ask-senior-button">
+                      <i class="fas fa-comment-dots icon"></i> Find Mentors
+                      
+                 </button>
+             </div>
+             <div class="card glass"> <h3><i class="fas fa-robot icon"></i> Ask AI Helper</h3>
+                  <div class="content">
+                      <p>Get instant help with your academic questions.</p>
+                 </div>
+                 <button id="ask-ai-button">
+                      <i class="fas fa-question-circle icon"></i> Ask Now
+                 </button>
+             </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

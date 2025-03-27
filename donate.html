@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Resource - Relearn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="form-page-container">
+        <div class="form-container glass">
+            <h2><i class="fas fa-plus-circle icon"></i> Donate Resource</h2>
+            <div class="college-display">
+                <i class="fas fa-university icon"></i> College: <span id="college-name-display">Loading...</span>
+            </div>
+
+            <form id="donate-form">
+                <div class="form-group">
+                    <label for="resource-title"><i class="fas fa-book icon"></i> Resource Title</label>
+                    <input type="text" id="resource-title" name="resource-title" required placeholder="e.g., Physics Semester 1 Notes">
+                </div>
+                <div class="form-group">
+                    <label for="resource-description"><i class="fas fa-align-left icon"></i> Description</label>
+                    <textarea id="resource-description" name="resource-description" rows="4" required placeholder="Briefly describe the resource (condition, contents, etc.)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resource-category"><i class="fas fa-tags icon"></i> Category</label>
+                    <select id="resource-category" name="resource-category" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Notes">Notes</option>
+                        <option value="Books">Textbooks / Reference Books</option>
+                        <option value="Lab Manuals">Lab Manuals</option>
+                        <option value="Exam Papers">Previous Exam Papers</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="resource-image"><i class="fas fa-image icon"></i> Upload Image (Optional)</label>
+                    <input type="file" id="resource-image" name="resource-image" accept="image/*">
+                    <small>Upload a picture of the resource. Max 5MB.</small>
+                </div>
+                 <div class="form-group">
+                    <label for="contact-email"><i class="fas fa-envelope icon"></i> Contact Email</label>
+                    <input type="email" id="contact-email" name="contact-email" required placeholder="Your email for coordination">
+                </div>
+                 <div class="form-group">
+                    <label for="contact-phone"><i class="fas fa-phone icon"></i> Contact Phone (Optional)</label>
+                    <input type="tel" id="contact-phone" name="contact-phone" placeholder="Your phone number (optional)">
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-paper-plane icon"></i> Submit Donation
+                </button>
+                 <a href="dashboard.html" class="back-link"><i class="fas fa-arrow-left icon"></i> Back to Dashboard</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
